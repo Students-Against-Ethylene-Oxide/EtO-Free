@@ -52,9 +52,61 @@ body {
 	width: 100vw;
 }
 
+header {
+	align-items: center;
+	background-color: inherit;
+	border-bottom: 3px dotted var(--base4);
+	box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 4.5vw;
+	position: fixed;
+	top: 0;
+	transition: 0s;
+	width: 92.5vw;
+	z-index: 3;
+}
+
+header h1, header a:first-child {
+	color: var(--accent2);
+	cursor: pointer;
+	font-family: var(--title);
+	font-size: 3.5vw;
+	text-decoration: none;
+}
+
+nav {
+	background-color: var(--base4);
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	z-index: 2;
+}
+
+nav .navlinks {
+	background: none;
+	border: none;
+	color: var(--base1);
+	cursor: pointer;
+	font-family: var(--title-font);
+	list-style-type: none;
+	opacity: 100%;
+	outline: none;
+	text-decoration: none;
+}
+
+nav .navlinks:hover {
+	color: var(--accent2);
+}
+
 h2 {
 	color: var(--accent1);
 	font-family: var(--title-font);
+}
+
+iframe {
+	width: 100%;
 }
 
 footer {
@@ -92,34 +144,6 @@ footer i {
   outline: 0px solid transparent;
 }
 
-#header {
-	align-items: center;
-	background-color: inherit;
-	border-bottom: 3px dotted var(--base4);
-	box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
-	display: flex;
-	flex-direction: row;
-	height: 11vw;
-	justify-content: space-between;
-	max-height: 110px;
-	min-height: 80px;
-	max-width: 100vw;
-	padding: 0 4.5vw;
-	position: fixed;
-	top: 0;
-	transition: 0s;
-	width: 92.5vw;
-	z-index: 3;
-}
-
-#header h1, #header a {
-	color: var(--accent2);
-	cursor: pointer;
-	font-family: var(--title);
-	font-size: 3.5vw;
-	text-decoration: none;
-}
-
 #menu-icon {
 	color: var(--base4);
 	cursor: pointer;
@@ -151,91 +175,58 @@ footer i {
   transform: rotate(45deg) translate(-3.25px, -8px);
 }
 
-#nav {
-	background-color: var(--base4);
-	display: block;
-	height: 0;
-	left: 0;
-	overflow: hidden;
-	width: 0;
-	z-index: 2;
-}
-
-#nav .navlinks {
-	background: none;
-	border: none;
-	color: var(--base1);
-	cursor: pointer;
-	font-family: var(--title-font);
-	opacity: 100%;
-	outline: none;
-	text-decoration: none;
-}
-
-#nav .navlinks:hover {
-	color: var(--accent2);
-}
-
-#page {
+.home-page {
 	display: flex;
 	flex-direction: column;
 }
 
-#home-page {
+.about-page {
 	display: flex;
 	flex-direction: column;
-	margin: 5vh auto 0 auto;
 }
 
-#about-page {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	margin-top: 5vh;
-	text-align: center;
-}
-
-#eto-page {
+.eto-page {
 	display: flex;
 	flex-direction: column;
 	margin: auto;
 	margin-top: 5vh;
 }
 
-#reviews-page {
+.reviews-page {
 	display: flex;
 	flex-direction: column;
 	margin-top: 5vh;
 }
 
 #reviews-sidebar {
-	display:
-	float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 30%;
+  border-right: 1px solid rgba(51, 62, 71, 0.3);
+	display: flex;
+	flex-direction: column;
   height: 300px;
+  width: 30%;
 }
 
 .accordion {
-  background-color: var(--base1);
+  background-color: none;
   color: var(--base2);
   cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
+	margin: 0px 10px;
   outline: none;
-  transition: 0.4s;
+  padding: 10px 0px;
+  transition: 0s;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: var(--base2);
-	color: var(--base1);
+.accordion:after {
+  content: '\02795';
+  font-size: 1.25em;
+  float: right;
+  margin-left: 5px;
 }
 
-/* Style the accordion panel. Note: hidden by default */
+.active:after, .accordion:hover:after {
+  content: '\2796';
+}
+
 .panel {
   padding: 0 18px;
   background-color: white;
@@ -335,6 +326,19 @@ footer i {
 	color: var(--accent2);
 }
 
+.aspect-ratio {
+	width: 100%;
+	height: 0;
+	padding-bottom: 51%;
+}
+
+.aspect-ratio iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0; top: 0;
+}
+
 .links {
 	color: var(--linkslight);
 	text-decoration: none;
@@ -346,6 +350,28 @@ footer i {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+	header {
+		height: 80px;
+	}
+
+	nav {
+		align-items: center;
+		display: flex;
+		/* justify-content: space-between; */
+		opacity: 0.95;
+		width: 100%;
+	}
+
+	nav .navlinks {
+		padding: 10px 0px;
+		text-align: center;
+	}
+
+	nav span {
+		display: block;
+		width: 100%;
+	}
+
 	footer h5, footer h6 {
 		font-size: 2.75vw;
 		width: 80%;
@@ -359,47 +385,20 @@ footer i {
 		display: none;
 	}
 
-	#nav {
-		align-items: center;
-		background-color: var(--base4);
-		display: flex;
-		height: 0;
-		justify-content: center;
-		left: 0;
-		opacity: 0.97;
-		overflow: hidden;
-		position: fixed;
-		top: 0;
-		width: 100%;
+	.home-page {
+		margin: auto;
+		margin-top: 80px;
 	}
 
-	#nav ul {
-		margin: 0;
-		padding: 0px;
-	}
-
-	#nav li {
-		font-size: 20px;
-		text-align: center;
-		margin: 0;
-		padding: 10px 0px;
-		width: 100%;
-	}
-
-	#page {
-		margin-top: 11vw;
-		padding: 0 10% 0 10%;
-	}
-
-	#home-page iframe {
+	.home-page iframe {
 		align-self: center;
 		height: 180px;
 		padding: 20px 0px 40px 0px;
 		width: 336px;
 	}
 
-	#about-page {
-		width: 75%
+	.about-page {
+		margin-top: 80px;
 	}
 
 	.team-pics {
@@ -409,6 +408,24 @@ footer i {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+	header {
+		height: 90px;
+	}
+
+	nav {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		font-size: 0.85em;
+		height: 0;
+		justify-content: space-around;
+		opacity: 1;
+		overflow: hidden;
+		position: fixed;
+		top: 90px;
+		width: 100%;
+	}
+
 	footer h5, footer h6 {
 		font-size: 12px;
 	}
@@ -421,44 +438,20 @@ footer i {
 		display: none;
 	}
 
-	#nav {
-		align-items: center;
-		display: flex;
-		flex-direction: row;
-		height: 0;
-		list-style-type: none;
-		max-height: 50px;
-		min-height: ;
-		opacity: 1;
-		overflow: hidden;
-		top: 12vw;
-		width: 100%;
+	.home-page {
+		margin: auto;
+		margin-top: 90px;
 	}
 
-	#nav ul {
-		padding: 0.4% 15px 1% 15px;
-	}
-
-	#nav li {
-		display: inline-block;
-		font-size: 15px;
-		opacity: 1;
-		padding: 0 10px;
-	}
-
-	#page {
-		margin: 10vw 10% 0 10%;
-	}
-
-	#home-page iframe {
+	.home-page iframe {
 		align-self: center;
 		height: 270px;
 		padding: 20px 0px 40px 0px;
 		width: 480px;
 	}
 
-	#about-page {
-		width: 75%
+	.about-page {
+		margin-top: 90px;
 	}
 
 	.team-pics {
@@ -468,6 +461,28 @@ footer i {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+	body {
+		background-color: var(--base2);
+	}
+
+	header {
+		height: 100px;
+	}
+
+	nav {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		font-size: 0.85em;
+		height: 0;
+		justify-content: space-around;
+		opacity: 1;
+		overflow: hidden;
+		position: fixed;
+		top: 100px;
+		width: 100%;
+	}
+
 	footer h5, footer h6 {
 		font-size: 13px;
 	}
@@ -480,37 +495,36 @@ footer i {
 		display: none;
 	}
 
-	#nav {
-		height: 0;
-		max-height: 10vh;
-		opacity: 1;
-		overflow-x: scroll;
-		overflow-y: scroll;
-		top: 10vw;
-		width: 100%;
+	.home-page {
+		margin: auto;
+		margin-top: 100px;
 	}
 
-	#nav ul {
-		/* padding: 2.5% 15px 1% 15px; */
-	}
-
-	#nav li {
-		display: inline-block;
-		font-size: 16px;
-		opacity: 1;
-		padding: 0 10px;
-	}
-
-	#page {
-		margin: 10vw 15% 0 15%;
-	}
-
-	#home-page iframe {
+	.home-page iframe {
 		padding: 20px 0px 40px 0px;
 	}
 
-	#about-page {
-		width: 75%
+	.about-page {
+		align-items: center;
+		/* margin-top: 120px; */
+	}
+
+	.about-page .row {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+
+	.about-page .row .mission {
+		padding: 40px;
+		text-align: center;
+		width: 50%;
+	}
+
+	.about-page .row .team {
+		padding: 40px;
+		text-align: center;
+		width: 30%;
 	}
 
 	.team-pics {
@@ -520,6 +534,14 @@ footer i {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+	header {
+		height: 110px;
+	}
+
+	nav {
+		display: none;
+	}
+
 	footer h5, footer h6 {
 		font-size: 13px;
 	}
@@ -579,29 +601,53 @@ footer i {
 		display: none;
 	}
 
-	#nav {
-		display: none;
+	.home-page {
+		margin: auto;
+		margin-top: 120px;
 	}
 
-	#page {
-		margin: 9vw 12.5% 0 12.5%;
-	}
-
-	#home-page iframe {
+	.home-page iframe {
 		padding: 0px 10px 0px 10px;
 	}
 
-	#about-page {
-		width: 70%
+	.about-page {
+		align-items: center;
+		margin-top: 120px;
+	}
+
+	.about-page .row {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+
+	.about-page .row .mission {
+		padding: 40px;
+		text-align: center;
+		width: 50%;
+	}
+
+	.about-page .row .team {
+		padding: 40px;
+		text-align: center;
+		width: 30%;
 	}
 
 	.team-pics {
-		width: 60%;
+		width: 75%;
 	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+	header {
+		height: 110px;
+	}
+
+	nav {
+		display: none;
+	}
+
 	footer h5, footer h6 {
 		font-size: 13px;
 	}
@@ -630,7 +676,7 @@ footer i {
 
 	#topnav #search-box:hover {
 		transition: 0.5s;
-		width: 24vw;
+		width: 20vw;
 	}
 
 	#topnav button {
@@ -665,16 +711,29 @@ footer i {
 		display: none;
 	}
 
-	#page {
-		margin: 9vw 12.5% 0 12.5%;
+	.home-page {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 10%;
+		margin-top: 120px;
+		padding-top: 30px;
 	}
 
-	#home-page iframe {
+	.home-page div:first-child {
+		margin-right: 20px;
+		width: 40%
+	}
+
+	.home-page iframe {
+		display: inline-block;
 		padding: 0px 10px 0px 10px;
+		float: right;
 	}
 
-	#about-page {
-		width: 70%
+	.about-page {
+		margin-top: 120px;
 	}
 
 	.team-pics {
