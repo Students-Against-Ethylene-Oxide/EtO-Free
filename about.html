@@ -12,22 +12,25 @@
 
 <body>
   <header id="header" class="header">
-    <h1 id="page-title"><a href='index.html'> EtO-Free Skincare </a></h1>
-    <div id="menu-icon" onclick='nav(); Animate(this);' ontouchstart='nav(); menuAnimate(this);'>
+    <button id="search" onclick='change("search-drop");' ontouchstart='change("search-drop");'><i class="fa fa-search"></i></button>
+
+    <a id="logo" href="index.html"> <img src="assets/images/logo.png" /> <h1> EtO-Free Skincare </h1> </a>
+
+    <span id="topnav">
+      <a href="index.html" class="toplinks"> Home </a>
+      <a href="about.html" class="toplinks"> About </a>
+      <a href="eto.html" class="toplinks"> What is ethylene oxide? </a>
+      <a href="reviews.html" class="toplinks"> Reviews </a>
+      <span id="search-box">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <input id="search-bar" type="text" placeholder="Search" />
+      </span></span>
+
+    <button id="menu-icon" onclick='change("menu-icon"); change("nav");' ontouchstart='change("menu-icon"); change("nav");'>
       <div id="bar1"></div>
       <div id="bar2"></div>
       <div id="bar3"></div>
-    </div>
-    <span id="topnav">
-    <a href="index.html" class="toplinks"> Home </a>
-    <a href="about.html" class="toplinks"> About </a>
-    <a href="eto.html" class="toplinks"> What is ethylene oxide? </a>
-    <a href="reviews.html" class="toplinks"> Reviews </a>
-    <span id="search-box">
-      <button <i id="search" class="fa fa-search" type="submit"></i></button>
-      <input id="search-bar" type="text" placeholder="Search" />
-    </span>
-    </span>
+    </button>
   </header>
 
   <nav id="nav">
@@ -36,6 +39,11 @@
     <span><a class="navlinks" href="eto.html"> What is ethylene oxide? </a></span>
     <span><a class="navlinks" href="reviews.html"> Reviews </a></span>
   </nav>
+
+  <div id="search-drop">
+    <input id="search-bar" type="text" placeholder="Search" />
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </div>
 
   <div class="about-page">
 
@@ -64,7 +72,7 @@
     </div>
 
     <div>
-        <h2> Meet Our Team! </h2>
+      <h2> Meet Our Team! </h2>
     </div>
 
     <div class="row">
@@ -72,7 +80,7 @@
         <img class='team-pics' src="assets/images/img asset 5.png" title="Alex Collins!" />
         <h3> Alexandra Collins</h3>
         <h4> Founder and Senior Director </h4>
-        <p>In 2018, Alexandra discovered that for 30 years, the Sterigenics company located near her neighborhood had been emitting high levels of Ethylene Oxide (EtO). As a result, her community suffered from a cancer rate nearly <em>nine-times</em>                        the national average. After learning that EtO is commonly used to sterilize beauty products, Alexandra decided to provide consumers with information on product sterilization in beauty and skincare by starting the EtO-free project!
+        <p>In 2018, Alexandra discovered that for 30 years, the Sterigenics company located near her neighborhood had been emitting high levels of Ethylene Oxide (EtO). As a result, her community suffered from a cancer rate nearly <em> nine-times </em> the national average. After learning that EtO is commonly used to sterilize beauty products, Alexandra decided to provide consumers with information on product sterilization in beauty and skincare by starting the EtO-free project!
         </p> <br>
       </div>
 

@@ -400,7 +400,12 @@ footer i {
 	}
 
 	.about-page {
-		margin-top: 80px;
+		align-items: center;
+		margin: 90px 10% 0 10%;
+	}
+
+	.about-page .row div {
+		text-align: center;
 	}
 
 	.team-pics {
@@ -507,7 +512,12 @@ footer i {
 	}
 
 	.about-page {
-		margin-top: 90px;
+		align-items: center;
+		margin: 100px 10% 0 10%;
+	}
+
+	.about-page .row div {
+		text-align: center;
 	}
 
 	.team-pics {
@@ -610,29 +620,23 @@ footer i {
 
 	.about-page {
 		align-items: center;
-		/* margin-top: 120px; */
+		margin: 110px 10% 0 10%;
 	}
 
 	.about-page .row {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
+		width: 70%;
 	}
 
-	.about-page .row .mission {
-		padding: 40px;
+	.about-page .row div {
+		min-width: 40%;
 		text-align: center;
-		width: 50%;
-	}
-
-	.about-page .row .team {
-		padding: 40px;
-		text-align: center;
-		width: 30%;
 	}
 
 	.team-pics {
-		width: 50%;
+		width: 60%;
 	}
 }
 
@@ -726,24 +730,18 @@ footer i {
 
 	.about-page {
 		align-items: center;
-		margin-top: 120px;
+		margin: 120px 10% 0 10%;
 	}
 
 	.about-page .row {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
-	}
-
-	.about-page .row .mission {
-		padding: 40px;
-		text-align: center;
-		width: 50%;
+		width: 100%;
 	}
 
 	.about-page .row .team {
-		padding: 40px;
-		text-align: center;
+		margin: 30px;
 		width: 30%;
 	}
 
@@ -845,7 +843,25 @@ footer i {
 	}
 
 	.about-page {
-		margin-top: 120px;
+		align-items: center;
+		margin: 120px 10% 0 10%;
+	}
+
+	.about-page .row {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.about-page .row .team {
+		margin: 30px;
+		width: 30%;
+	}
+
+	.about-page .row .mission {
+		margin: 30px;
+		width: 100%;
 	}
 
 	.team-pics {
