@@ -12,50 +12,54 @@
 
   <body>
     <header id="header" class="header">
-      <h1 id="page-title"><a href='index.html'> EtO-Free Skincare </a></h1>
-      <div id="menu-icon" onclick='nav(); Animate(this);' ontouchstart='nav(); menuAnimate(this);'>
-        <div id="bar1"></div>
-        <div id="bar2"></div>
-        <div id="bar3"></div>
-      </div>
+      <button id="search" onclick='change("search-drop");' ontouchstart='change("search-drop");'><i class="fa fa-search"></i></button>
+
+      <a id="logo" href="index.html"> <img src="assets/images/logo.png" /> <h1> EtO-Free Skincare </h1> </a>
+
       <span id="topnav">
         <a href="index.html" class="toplinks"> Home </a>
         <a href="about.html" class="toplinks"> About </a>
         <a href="eto.html" class="toplinks"> What is ethylene oxide? </a>
         <a href="reviews.html" class="toplinks"> Reviews </a>
         <span id="search-box">
-          <button <i id="search" class="fa fa-search" type="submit"></i></button>
+          <button type="submit"><i class="fa fa-search"></i></button>
           <input id="search-bar" type="text" placeholder="Search" />
-        </span>
-      </span>
+        </span></span>
+
+      <button id="menu-icon" onclick='change("menu-icon"); change("nav");' ontouchstart='change("menu-icon"); change("nav");'>
+        <div id="bar1"></div>
+        <div id="bar2"></div>
+        <div id="bar3"></div>
+      </button>
     </header>
 
-    <div id="nav" class="nav">
-      <ul>
-        <li><a class="navlinks" href="index.html"> Home </a></li>
-        <li><a class="navlinks" href="about.html"> About </a></li>
-        <li><a class="navlinks" href="eto.html"> What is ethylene oxide? </a></li>
-        <li><a class="navlinks" href="reviews.html"> Reviews </a></li>
-      </ul>
+    <nav id="nav">
+      <span><a class="navlinks" href="index.html"> Home </a></span>
+      <span><a class="navlinks" href="about.html"> About </a></span>
+      <span><a class="navlinks" href="eto.html"> What is ethylene oxide? </a></span>
+      <span><a class="navlinks" href="reviews.html"> Reviews </a></span>
+    </nav>
+
+    <div id="search-drop">
+      <input id="search-bar" type="text" placeholder="Search" />
+      <button type="submit"><i class="fa fa-search"></i></button>
     </div>
 
-    <div id="page">
-      <div id="eto-page">
-        <h2> What is Ethylene Oxide? Why is it dangerous?</h2>
-        <p>
-          According to the World Health Organization, ethylene oxide is a class 1 carcinogen. This means that when humans and animals are exposed to it, the chemical may mutate the DNA of the organism, causing cancer and other harmful side effects. As the sterilization process of beauty products requires ethylene oxide, factories that use it may release the carcinogen into the air, thereby exposing people to the chemical during the production of beauty and skincare products. According to the National Laboratory of Medicine, effects of ethylene oxide exposure include:
-        </p>
+    <div class="eto-page">
+      <h2> What is Ethylene Oxide? Why is it dangerous?</h2>
+      <p>
+        According to the World Health Organization, ethylene oxide is a class 1 carcinogen. This means that when humans and animals are exposed to it, the chemical may mutate the DNA of the organism, causing cancer and other harmful side effects. As the sterilization process of beauty products requires ethylene oxide, factories that use it may release the carcinogen into the air, thereby exposing people to the chemical during the production of beauty and skincare products. According to the National Laboratory of Medicine, effects of ethylene oxide exposure include:
+      </p>
 
-        <ul>
-          <li> Cancer </li>
-          <li> Cataracts and eye damage </li>
-          <li> Miscarriage </li>
-          <li> Headache and memory loss </li>
-          <li> Nausea and vomiting </li>
-          <li> Irritation of the eyes, skin, and nose </li>
-          <li> Problems with brain and nerve functions </li>
-        </ul>
-      </div>
+      <ul>
+        <li> Cancer </li>
+        <li> Cataracts and eye damage </li>
+        <li> Miscarriage </li>
+        <li> Headache and memory loss </li>
+        <li> Nausea and vomiting </li>
+        <li> Irritation of the eyes, skin, and nose </li>
+        <li> Problems with brain and nerve functions </li>
+      </ul>
     </div>
 
     <footer>

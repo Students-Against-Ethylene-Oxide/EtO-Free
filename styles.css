@@ -163,6 +163,14 @@ footer i {
 	width: 25px;
 }
 
+#reviews-sidebar {
+  border-right: 1px solid rgba(51, 62, 71, 0.3);
+	display: flex;
+	flex-direction: column;
+  height: 300px;
+  width: 30%;
+}
+
 .change #bar1 {
   -webkit-transform: rotate(-45deg) translate(0, 0);
   transform: rotate(-45deg) translate(-3.25px, 8px);
@@ -177,35 +185,9 @@ footer i {
   transform: rotate(45deg) translate(-3.25px, -8px);
 }
 
-.home-page {
+.home-page, .about-page, .eto-page, .reviews-page {
 	display: flex;
 	flex-direction: column;
-}
-
-.about-page {
-	display: flex;
-	flex-direction: column;
-}
-
-.eto-page {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	margin-top: 5vh;
-}
-
-.reviews-page {
-	display: flex;
-	flex-direction: column;
-	margin-top: 5vh;
-}
-
-#reviews-sidebar {
-  border-right: 1px solid rgba(51, 62, 71, 0.3);
-	display: flex;
-	flex-direction: column;
-  height: 300px;
-  width: 30%;
 }
 
 .accordion {
@@ -408,6 +390,11 @@ footer i {
 		text-align: center;
 	}
 
+	.eto-page {
+		align-items: left;
+		margin: 90px 10% 0 10%;
+	}
+
 	.team-pics {
 		width: 50%;
 	}
@@ -518,6 +505,11 @@ footer i {
 
 	.about-page .row div {
 		text-align: center;
+	}
+
+	.eto-page {
+		align-items: left;
+		margin: 100px 10% 0 10%;
 	}
 
 	.team-pics {
@@ -714,7 +706,7 @@ footer i {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin: 120px 10% 0 10%;
+		margin: 130px 10% 0 10%;
 		padding-top: 30px;
 	}
 
@@ -730,7 +722,7 @@ footer i {
 
 	.about-page {
 		align-items: center;
-		margin: 120px 10% 0 10%;
+		margin: 130px 10% 0 10%;
 	}
 
 	.about-page .row {
@@ -743,6 +735,11 @@ footer i {
 	.about-page .row .team {
 		margin: 30px;
 		width: 30%;
+	}
+
+	.eto-page {
+		align-items: left;
+		margin: 130px 10% 0 10%;
 	}
 
 	.team-pics {
@@ -828,7 +825,7 @@ footer i {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin: 120px 10% 0 10%;
+		margin: 130px 10% 0 10%;
 		padding-top: 30px;
 	}
 
@@ -844,7 +841,7 @@ footer i {
 
 	.about-page {
 		align-items: center;
-		margin: 120px 10% 0 10%;
+		margin: 130px 10% 0 10%;
 	}
 
 	.about-page .row {
@@ -862,6 +859,11 @@ footer i {
 	.about-page .row .mission {
 		margin: 30px;
 		width: 100%;
+	}
+
+	.eto-page {
+		align-items: left;
+		margin: 130px 10% 0 10%;
 	}
 
 	.team-pics {
