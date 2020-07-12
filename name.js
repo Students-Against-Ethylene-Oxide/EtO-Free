@@ -1,24 +1,18 @@
 
-function nav() {
-  var w = window.innerWidth
-  || document.documentElement.clientWidth
-  || document.body.clientWidth;
+function change(object) {
+  var element = document.getElementById(object);
 
-  if (w < 600) {
-    if (document.getElementById('nav').style.height != '100vh') {
-      document.getElementById('nav').style.height = '100vh';
-    } else {
-      document.getElementById('nav').style.height = '0';
-    }
-  } else if (w > 600) {
-    if (document.getElementById('nav').style.height != '60px') {
-      document.getElementById('nav').style.height = '60px';
-    } else {
-      document.getElementById('nav').style.height = '0';
-    }
+  if (element.classList) {
+    element.classList.toggle("change");
+  } else {
+    // For IE9
+    var classes = element.className.split(" ");
+    var i = classes.indexOf("change");
+
+    if (i >= 0)
+      classes.splice(i, 1);
+    else
+      classes.push("change");
+      element.className = classes.join(" ");
   }
-}
-
-function Animate(x) {
-  x.classList.toggle("change");
 }
