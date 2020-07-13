@@ -11,8 +11,11 @@
 </head>
 
 <body>
-  <header id="header" class="header">
-    <button id="search" onclick='change("search-drop");' ontouchstart='change("search-drop");'><i class="fa fa-search"></i></button>
+  <header>
+    <button id="menu-icon" onclick='change("menu-icon"); change("nav");' ontouchstart='change("menu-icon"); change("nav");'>
+      <div id="bar1"></div>
+      <div id="bar2"></div>
+      <div id="bar3"></div></button>
 
     <a id="logo" href="index.html"> <img src="assets/images/logo.png" /> <h1> EtO-Free Skincare </h1> </a>
 
@@ -26,24 +29,17 @@
         <input id="search-bar" type="text" placeholder="Search" />
       </span></span>
 
-    <button id="menu-icon" onclick='change("menu-icon"); change("nav");' ontouchstart='change("menu-icon"); change("nav");'>
-      <div id="bar1"></div>
-      <div id="bar2"></div>
-      <div id="bar3"></div>
-    </button>
+    <button id="search" onclick='change("menu-icon"); change("nav");' ontouchstart='change("search-drop");'><i class="fa fa-search"></i></button>
   </header>
 
   <nav id="nav">
-    <span><a class="navlinks" href="index.html"> Home </a></span>
-    <span><a class="navlinks" href="about.html"> About </a></span>
-    <span><a class="navlinks" href="eto.html"> What is ethylene oxide? </a></span>
-    <span><a class="navlinks" href="reviews.html"> Reviews </a></span>
+    <span> <input type="text" placeholder="Search" /><button type="submit"> <i class="fa fa-search"></i> </button> </span>
+    <span> <a class="navlinks" href="index.html"> Home </a> </span>
+    <span> <a class="navlinks" href="about.html"> About </a> </span>
+    <span> <a class="navlinks" href="eto.html"> What is ethylene oxide? </a> </span>
+    <span> <a class="navlinks" href="reviews.html"> Reviews </a> </span>
+    <span> <input type="text" placeholder="Search" /><button type="submit"><i class="fa fa-search"></i></button> </span>
   </nav>
-
-  <div id="search-drop">
-    <input id="search-bar" type="text" placeholder="Search" />
-    <button type="submit"><i class="fa fa-search"></i></button>
-  </div>
 
   <div class="home-page">
     <div>
