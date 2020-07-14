@@ -28,6 +28,8 @@ font-family: 'Seaweed Script', cursive;
 
 #disclaimer {
 	color: var(--linkslight);
+	font-family: var(--title-font);
+	margin: 0 0 18px 0;
 }
 
 * {
@@ -36,6 +38,7 @@ font-family: 'Seaweed Script', cursive;
 
 html {
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -56,7 +59,6 @@ header {
 	align-items: center;
 	background-color: inherit;
 	border-bottom: 3px dotted var(--base4);
-	box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -64,7 +66,7 @@ header {
 	position: fixed;
 	top: 0;
 	transition: 0s;
-	width: 92.5vw;
+	width: 91vw;
 	z-index: 3;
 }
 
@@ -84,19 +86,14 @@ nav {
 	z-index: 2;
 }
 
-nav .navlinks {
-	background: none;
-	border: none;
+nav a, nav i {
 	color: var(--base1);
 	cursor: pointer;
 	font-family: var(--title-font);
-	list-style-type: none;
-	opacity: 100%;
-	outline: none;
 	text-decoration: none;
 }
 
-nav .navlinks:hover {
+nav a:hover, nav i:hover {
 	color: var(--accent2);
 }
 
@@ -141,10 +138,6 @@ footer i {
 	padding: 0 5px;
 }
 
-#search-drop.change {
-	height: 60px;
-}
-
 #menu-icon {
 	background: none;
 	border: none;
@@ -163,12 +156,28 @@ footer i {
 	width: 25px;
 }
 
-#reviews-sidebar {
-  border-right: 1px solid rgba(51, 62, 71, 0.3);
+#filters {
+	border: 2px solid rgba(51, 62, 71, 0.3);
+	border-radius: 5px;
+}
+
+#reviews-main {
+	border: 2px solid rgba(51, 62, 71, 0.3);
+	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
-  height: 300px;
-  width: 30%;
+}
+
+#reviews-sidebar {
+	border: 2px solid rgba(51, 62, 71, 0.3);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+}
+
+#reviews-sidebar .accordion:hover {
+	color: var(--accent1);
 }
 
 .change #bar1 {
@@ -185,9 +194,14 @@ footer i {
   transform: rotate(45deg) translate(-3.25px, -8px);
 }
 
-.home-page, .about-page, .eto-page, .reviews-page {
+.home-page, .about-page, .eto-page {
 	display: flex;
 	flex-direction: column;
+}
+
+.reviews-page {
+	display: flex;
+	flex-flow: row wrap;
 }
 
 .accordion {
@@ -202,8 +216,8 @@ footer i {
 
 .accordion:after {
   content: '\02795';
-  font-size: 1.25em;
   float: right;
+	font-size: 0.8em;
   margin-left: 5px;
 }
 
@@ -211,12 +225,37 @@ footer i {
   content: '\2796';
 }
 
+.card {
+	background: inherit;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	margin: 5px;
+	padding: 10px;
+}
+
+.card:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+	color: var(--accent2);
+}
+
 .panel {
-  padding: 0 18px;
   background-color: white;
-  display: none;
+  display: flex;
+	flex-flow: row wrap;
+	height: 0;
   overflow: hidden;
-}.tag {
+	padding: 0 18px;
+}
+
+.panel.change {
+	height: unset;
+	padding: 18px;
+}
+
+.tag {
 	background: none;
 	border: 1px solid rgba(11, 19, 43, 0.2);
 	border-radius: 30px;
@@ -288,29 +327,58 @@ footer i {
 		height: 80px;
 	}
 
-	header a h1, #topnav {
+	header a h1, nav span:first-child, nav span:last-child, #topnav {
 		display: none;
 	}
 
 	header a img {
-		border: 2px groove var(--base4);
+		border: 2px solid var(--base4);
 		border-radius: 50%;
 		display: initial;
 		height: 60px;
+		margin-right: 5px;
 	}
 
 	nav {
 		align-items: center;
 		display: flex;
 		flex-direction: column;
+		height: 0;
 		justify-content: center;
-		opacity: 0.95;
+		transition: 0.5s;
 		width: 100%;
 	}
 
 	nav span {
+		align-items: center;
+		border-bottom: 2px solid var(--base1);
+		display: flex;
+		flex-direction: row;
 		padding: 10px 0;
+		width: 80%;
+	}
+
+	nav input[type=text] {
+		color: var(--base4);
+		font-size: 0.85em;
+		height: 30px;
+		width: 85%;
+	}
+
+	nav button {
+		/* border: 1px solid var(--base1); */
+		background: none;
+		border: none;
+		color: var(--base1);
+		cursor: pointer;
+		font-size: 1.05em;
+		height: 30px;
 		text-align: center;
+		width: 15%;
+	}
+
+	nav.change {
+		height: 100vh;
 	}
 
 	footer h5, footer h6 {
@@ -318,14 +386,8 @@ footer i {
 		width: 80%;
 	}
 
-	#menu-icon {
-		margin: 0 2vw 0 0;
-	}
-
 	#search {
-		background: none;
-		border: none;
-		margin: 0 0 0 0;
+		visibility: hidden;
 	}
 
 	#search i {
@@ -333,43 +395,36 @@ footer i {
 		font-size: 22.5px;
 	}
 
-	#search-drop {
-		align-items: center;
-		background-color: var(--base4);
-		display: flex;
-		flex-direction: row;
-		height: 0;
-		justify-content: center;
-		overflow: hidden;
-		position: fixed;
-		top: 80px;
+	#filters {
+		margin: 0 0 20px 0;
 		width: 100%;
 	}
 
-	#search-drop input[type=text] {
-		color: var(--base4);
-		font-size: 0.85em;
-		height: 30px;
-		margin-left: 1vw;
-		width: 70%;
-	}
-
-	#search-drop button {
+	#filters button {
 		background: none;
 		border: none;
-		color: var(--base1);
-		cursor: pointer;
-		font-size: 1.05em;
-		padding: 0.5vw 0.5vw 0.5vw 3vw;
+		color: var(--base4);
+		font-family: var(--title-font);
+		font-size: 14px;
 	}
 
-	#nav.change {
-		height: 100vh;
+	#filters button:hover {
+		color: var(--accent1);
+	}
+
+	#reviews-main {
+		align-items: initial;
+		width: 100%;
+	}
+
+	#reviews-sidebar {
+		margin: 20px 0 0 0;
+		width: 100%;
 	}
 
 	.home-page {
 		align-items: center;
-		margin: 90px 10% 0 10%;
+		margin: 100px 10% 0 10%;
 	}
 
 	.home-page div:first-child {
@@ -383,7 +438,7 @@ footer i {
 
 	.about-page {
 		align-items: center;
-		margin: 90px 10% 0 10%;
+		margin: 100px 10% 0 10%;
 	}
 
 	.about-page .row div {
@@ -392,11 +447,15 @@ footer i {
 
 	.eto-page {
 		align-items: left;
-		margin: 90px 10% 0 10%;
+		margin: 100px 10% 0 10%;
+	}
+
+	.reviews-page {
+		margin: 100px 10% 0 10%;
 	}
 
 	.team-pics {
-		width: 50%;
+		width: 70%;
 	}
 }
 
@@ -514,6 +573,34 @@ footer i {
 
 	.team-pics {
 		width: 50%;
+	}
+
+	.reviews-page {
+		margin: 110px 5% 0 5%;
+	}
+
+	#filters {
+		border: 1px solid rgba(51, 62, 71, 0.3);
+		margin: 0 0 20px 0;
+		width: 100%;
+	}
+
+	#reviews-main {
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+	}
+
+	#reviews-sidebar {
+		border: 1px solid rgba(51, 62, 71, 0.3);
+		margin: 20px 0 0 0;
+		width: 100%;
+	}
+
+	.card {
+		float: top;
+		height: min-content;
+		width: 44.5%;
 	}
 }
 

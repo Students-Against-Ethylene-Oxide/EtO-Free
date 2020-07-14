@@ -11,38 +11,51 @@
   </head>
 
   <body>
-    <header id="header" class="header">
-      <h1 id="page-title"><a href='index.html'> EtO-Free Skincare </a></h1>
-      <div id="menu-icon" onclick='nav(); Animate(this);' ontouchstart='nav(); menuAnimate(this);'>
+    <header>
+      <button id="menu-icon" onclick='change("menu-icon"); change("nav");' ontouchstart='change("menu-icon"); change("nav");'>
         <div id="bar1"></div>
         <div id="bar2"></div>
-        <div id="bar3"></div>
-      </div>
+        <div id="bar3"></div></button>
+
+      <a id="logo" href="index.html"> <img src="assets/images/logo.png" /> <h1> EtO-Free Skincare </h1> </a>
+
       <span id="topnav">
         <a href="index.html" class="toplinks"> Home </a>
         <a href="about.html" class="toplinks"> About </a>
         <a href="eto.html" class="toplinks"> What is ethylene oxide? </a>
         <a href="reviews.html" class="toplinks"> Reviews </a>
         <span id="search-box">
-          <button <i id="search" class="fa fa-search" type="submit"></i></button>
+          <button type="submit"><i class="fa fa-search"></i></button>
           <input id="search-bar" type="text" placeholder="Search" />
-        </span>
-      </span>
+      </span></span>
+
+      <button id="search" onclick='change("menu-icon"); change("nav");' ontouchstart='change("search-drop");'><i class="fa fa-search"></i></button>
     </header>
 
-    <div id="nav" class="nav">
-      <ul>
-        <li><a class="navlinks" href="index.html"> Home </a></li>
-        <li><a class="navlinks" href="about.html"> About </a></li>
-        <li><a class="navlinks" href="eto.html"> What is ethylene oxide? </a></li>
-        <li><a class="navlinks" href="reviews.html"> Reviews </a></li>
-      </ul>
-    </div>
+    <nav id="nav">
+      <span> <input type="text" placeholder="Search" /><button type="submit"> <i class="fa fa-search"></i> </button> </span>
+      <span> <a class="navlinks" href="index.html"> Home </a> </span>
+      <span> <a class="navlinks" href="about.html"> About </a> </span>
+      <span> <a class="navlinks" href="eto.html"> What is ethylene oxide? </a> </span>
+      <span> <a class="navlinks" href="reviews.html"> Reviews </a> </span>
+      <span> <input type="text" placeholder="Search" /><button type="submit"><i class="fa fa-search"></i></button> </span>
+    </nav>
 
-    <div id="page">
+    <div class="reviews-page">
+      <div id="filters">
+        <button href='#reviews-sidebar' onclick="document.getElementById('reviews-sidebar').scrollIntoView();" ontouchstart="document.getElementById('reviews-sidebar').scrollIntoView();"> <i class='fa fa-filter'></i> Filters </button>
+      </div>
+      <p id='disclaimer'>
+        ***At the moment, none of the links below are active or contain any content. </p>
+      <div id="reviews-main">
+        <span class="card">Badger Healthy Body Care Tea Tree Oil</span>
+        <span class="card">Sia Botanics Facial Cleanser</span>
+        <span class="card">Jane Iredale Niacinamide Serum</span>
+        <span class="card">SkinOwl Rosehip Oils</span>
+      </div>
       <div id="reviews-sidebar">
-        <a class="accordion"> Skin Type </a>
-        <div class="panel">
+        <a class="accordion" onclick="change('skin-type');" ontouchstart="change('skin-type')"> Skin Type </a>
+        <div id="skin-type" class="panel">
           <button class="tag"> Oily </button>
           <button class="tag"> Dry </button>
           <button class="tag"> Combination </button>
@@ -50,116 +63,57 @@
           <button class="tag"><a class="links" href="https://www.youtube.com/watch?v=vic-EMOivpA&app=desktop"><b> Help! I don't know what my skin type is! </b></a></button>
         </div>
 
-        <a class="accordion"> Product Type </a>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
-        </div>
+        <a class="accordion" onclick="change('product-type')" ontouchstart="change('product-type')"> Product Type </a>
+        <div id="product-type" class="panel">
+          <h3> Treatments </h3>
+          <span id="treatments">
+            <button class='tag' href="#"> Vitamin C Absorbic Acid Serums </button>
+            <button class='tag' href="#"> Niacinamide Serums </button>
+            <button class='tag' href="#"> Tea Tree Oil Serums </button>
+            <button class='tag' href="#"> Rosehip Oils </button>
+          </span>
 
-        <a class="accordion"> Company </a>
-        <div class="panel">
-          <button class='companies tag' href="#">Badger Healthy Body Care</button>
-          <button class='companies tag' href="#">Jane Iredale</button>
-          <button class='companies tag' href="#">Sia Botanics</button>
-          <button class='companies tag' href="#">SkinOwl</button>
-          <button class='companies tag' href="#">First Aid Beauty</button>
-          <button class='companies tag' href="#">Thesis</button>
-          <button class='companies tag' href="#">Naturium</button>
-        </div>
-      </div>
-      <div id="reviews-page">
+          <h3> Cleansers </h3>
+          <span id="cleansers">
+            <button class='tag' href="#"> Benzoyl Peroxide Cleansers </button>
+            <button class='tag' href="#"> Salicylic Acid Cleansers </button>
+            <button class='tag' href="#"> Oil Cleansers </button>
+            <button class='tag' href="#"> Cream Cleansers </button>
+          </span>
 
-        <!-- <h2 id='disclaimer'>
-          ***At the moment, none of the links below are active or contain any content.
-        </h2>
+          <h3> Moisturizers </h3>
+          <span id="moisturizers">
+            <button class='tag' href="#"> Gel Moisturizers </button>
+            <button class='tag' href="#"> Snail Moisturizers </button>
+            <button class='tag' href="#"> SPF Moisturizers </button>
+            <button class='tag' href="#"> Night Cream Moisturizers </button>
+          </span>
 
-        <br />
+          <h3> Sunscreens </h3>
+          <span id="sunscreens">
+            <button class='tag' href="#"> Mineral Sunscreens </button>
+            <button class='tag' href="#"> Chemical Sunscreens </button>
+          </span>
 
-        <span id='filter'>
-          <i id='filter-btn' class="fa fa-filter"><span> Filter </span></i>
-          <input id='filter-input' type="text" placeholder="Search" onkeyup="filter();" style="display: none;">
-          <button class="tag" onclick='filterSelection(oily)'> For oily skin </button>
-          <button class="tag" onclick='filterSelection(dry)'> For dry skin </button>
-          <button class="tag" onclick='filterSelection(combination)'> For combination skin </button>
-          <button class="tag" onclick='filterSelection(normal)'> For normal skin </button>
-        </span>
-
-        <div id="by-skin-type">
-          <h2> Reviews Sorted By Skin Type </h2>
-          <span id="skin-types">
-            <button class="tag"> Oily </button>
-            <button class="tag"> Dry </button>
-            <button class="tag"> Combination </button>
-            <button class="tag"> Normal </button>
-            <button class="tag"><a class="links" href="https://www.youtube.com/watch?v=vic-EMOivpA&app=desktop"><b> Help! I don't know what my skin type is! </b></a></button>
+          <h3> Exfoliants </h3>
+          <span id="exfoliants">
+            <button class='tag' href="#"> Gentle Exfoliants </button>
+            <button class='tag' href="#"> Strong Exfoliants </button>
           </span>
         </div>
 
-        <div id="by-company">
-          <h2> Reviews Sorted By Company</h2>
-          <span id="companies">
-            <button class='companies tag' href="#">Badger Healthy Body Care</button>
-            <button class='companies tag' href="#">Jane Iredale</button>
-            <button class='companies tag' href="#">Sia Botanics</button>
-            <button class='companies tag' href="#">SkinOwl</button>
-            <button class='companies tag' href="#">First Aid Beauty</button>
-            <button class='companies tag' href="#">Thesis</button>
-            <button class='companies tag' href="#">Naturium</button>
-          </span>
+        <a class="accordion" onclick="change('company')" ontouchstart="change('company')"> Company </a>
+        <div id="company" class="panel">
+          <button class='tag' href="#">Badger Healthy Body Care</button>
+          <button class='tag' href="#">Jane Iredale</button>
+          <button class='tag' href="#">Sia Botanics</button>
+          <button class='tag' href="#">SkinOwl</button>
+          <button class='tag' href="#">First Aid Beauty</button>
+          <button class='tag' href="#">Thesis</button>
+          <button class='tag' href="#">Naturium</button>
         </div>
-
-        <br>
-
-        <div id="by-product">
-          <h2> Reviews Sorted By Product Type</h2>
-          <div>
-            <h3> Treatments </h3>
-            <span id="treatments">
-              <button class='tag' href="#"> Best Vitamin C Absorbic Acid Serums </button>
-              <button class='tag' href="#"> Best Niacinamide Serums </button>
-              <button class='tag' href="#"> Best Tea Tree Oil Serums </button>
-              <button class='tag' href="#"> Best Rosehip Oils </button>
-            </span>
-          </div>
-
-          <div>
-            <h3> Cleansers </h3>
-            <span id="cleansers">
-              <button class='tag' href="#"> Best Benzoyl Peroxide Cleansers </button>
-              <button class='tag' href="#"> Best Salicylic Acid Cleansers </button>
-              <button class='tag' href="#"> Best Oil Cleansers </button>
-              <button class='tag' href="#"> Best Cream Cleansers </button>
-            </span>
-          </div>
-
-          <div>
-            <h3> Moisturizers </h3>
-            <span id="moisturizers">
-              <button class='tag' href="#"> Best Gel Moisturizers </button>
-              <button class='tag' href="#"> Best Snail Moisturizers </button>
-              <button class='tag' href="#"> Best SPF Moisturizers </button>
-              <button class='tag' href="#"> Best Night Cream Moisturizers </button>
-            </span>
-          </div>
-
-          <div>
-            <h3> Sunscreens </h3>
-            <span id="sunscreens">
-              <button class='tag' href="#"> Best Mineral Sunscreens </button>
-              <button class='tag' href="#"> Best Chemical Sunscreens </button>
-            </span>
-          </div>
-
-          <div>
-            <h3> Exfoliants </h3>
-            <span id="exfoliants">
-              <button class='tag' href="#"> Best Gentle Exfoliants </button>
-              <button class='tag' href="#"> Best Strong Exfoliants </button>
-            </span>
-          </div>
-        </div>
-
       </div>
-    </div> -->
+    </div>
 
     <footer>
       <h5> Questions? Comments? Concerns? Life problems? Contact us at <a class='links' href="mailto:ethyleneoxide.free@gmail.com"> ethyleneoxide.free@gmail.com </a> <br><br>
