@@ -24,12 +24,13 @@
       <a href="about.html" class="toplinks"> About </a>
       <a href="eto.html" class="toplinks"> What is ethylene oxide? </a>
       <a href="reviews.html" class="toplinks"> Reviews </a>
-      <span id="search-box">
+      <span id="search-box" onmouseover="change('topnav'); change('search-box');"
+      onmouseout="change('topnav'); change('search-box');">
         <button type="submit"><i class="fa fa-search"></i></button>
         <input id="search-bar" type="text" placeholder="Search" />
       </span></span>
 
-    <button id="search" onclick='change("menu-icon"); change("nav");' ontouchstart='change("search-drop");'><i class="fa fa-search"></i></button>
+    <button id="search" onclick='change("menu-icon"); change("nav");' ontouchstart='change("menu-icon"); change("nav");'><i class="fa fa-search"></i></button>
   </header>
 
   <nav id="nav">

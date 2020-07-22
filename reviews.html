@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title> EtO-Free Skincare </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -17,17 +17,20 @@
         <div id="bar2"></div>
         <div id="bar3"></div></button>
 
-      <a id="logo" href="index.html"> <img src="assets/images/logo.png" /> <h1> EtO-Free Skincare </h1> </a>
+      <div>
+        <a id="logo" href="index.html"> <img src="assets/images/logo.png" /> <h1> EtO-Free Skincare </h1> </a>
+      </div>
 
       <span id="topnav">
         <a href="index.html" class="toplinks"> Home </a>
         <a href="about.html" class="toplinks"> About </a>
         <a href="eto.html" class="toplinks"> What is ethylene oxide? </a>
         <a href="reviews.html" class="toplinks"> Reviews </a>
-        <span id="search-box">
-          <button type="submit"><i class="fa fa-search"></i></button>
+        <span id="search-box" onmouseover="change('topnav'); change('search-box');"
+        onmouseout="change('topnav'); change('search-box');">          <button type="submit"><i class="fa fa-search"></i></button>
           <input id="search-bar" type="text" placeholder="Search" />
-      </span></span>
+        </span>
+      </span>
 
       <button id="search" onclick='change("menu-icon"); change("nav");' ontouchstart='change("search-drop");'><i class="fa fa-search"></i></button>
     </header>
@@ -41,12 +44,23 @@
       <span> <input type="text" placeholder="Search" /><button type="submit"><i class="fa fa-search"></i></button> </span>
     </nav>
 
+    <p id='disclaimer'>
+      ***At the moment, we have no content available for viewing. Please check back again later for any changes.  </p>
     <div class="reviews-page">
       <div id="filters">
+        <span>
+          <button id="sort-by" > Sort <i class="fa fa-chevron-down"></i></button>
+          <div id="sort-drop">
+            <button class="sort-by"> A to Z </button>
+            <button class="sort-by"> Z to A </button>
+            <button class="sort-by"> By Company </button>
+            <button class="sort-by"> By Product </button>
+            <button class="sort-by"> By Release Date </button>
+          </div>
+        </span>
+
         <button href='#reviews-sidebar' onclick="document.getElementById('reviews-sidebar').scrollIntoView();" ontouchstart="document.getElementById('reviews-sidebar').scrollIntoView();"> <i class='fa fa-filter'></i> Filters </button>
       </div>
-      <p id='disclaimer'>
-        ***At the moment, none of the links below are active or contain any content. </p>
       <div id="reviews-main">
         <span class="card">Badger Healthy Body Care Tea Tree Oil</span>
         <span class="card">Sia Botanics Facial Cleanser</span>
@@ -54,7 +68,7 @@
         <span class="card">SkinOwl Rosehip Oils</span>
       </div>
       <div id="reviews-sidebar">
-        <a class="accordion" onclick="change('skin-type');" ontouchstart="change('skin-type')"> Skin Type </a>
+        <a id="accordion1" class="accordion" onclick="change('skin-type'); change('accordion1');" ontouchstart="change('skin-type'); change('accordion1');"> Skin Type </a>
         <div id="skin-type" class="panel">
           <button class="tag"> Oily </button>
           <button class="tag"> Dry </button>
@@ -63,7 +77,7 @@
           <button class="tag"><a class="links" href="https://www.youtube.com/watch?v=vic-EMOivpA&app=desktop"><b> Help! I don't know what my skin type is! </b></a></button>
         </div>
 
-        <a class="accordion" onclick="change('product-type')" ontouchstart="change('product-type')"> Product Type </a>
+        <a id="accordion2" class="accordion" onclick="change('product-type'); change('accordion2');" ontouchstart="change('product-type'); change('accordion2');"> Product Type </a>
         <div id="product-type" class="panel">
           <h3> Treatments </h3>
           <span id="treatments">
@@ -102,7 +116,7 @@
           </span>
         </div>
 
-        <a class="accordion" onclick="change('company')" ontouchstart="change('company')"> Company </a>
+        <a id="accordion3" class="accordion" onclick="change('company'); change('accordion3');" ontouchstart="change('company'); change('accordion3');"> Company </a>
         <div id="company" class="panel">
           <button class='tag' href="#">Badger Healthy Body Care</button>
           <button class='tag' href="#">Jane Iredale</button>
