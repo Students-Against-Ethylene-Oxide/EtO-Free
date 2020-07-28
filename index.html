@@ -7,10 +7,11 @@
   <title> EtO-Free Skincare </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
-  <link type="text/javascript" src="name.js" />
-  <link type="text/html" src="about.html" />
-  <link type="text/html" src="eto.html" />
-  <link type="text/html" src="reviews.html" />
+  <script type="text/javascript" src="javascript.js"></script>
+  <script type="text/javascript" src="jquery.js"></script>
+  <!-- <link type="text/html" data-src="about.html" />
+  <link type="text/html" data-src="eto.html" />
+  <link type="text/html" data-src="reviews.html" /> -->
 </head>
 
 <body>
@@ -70,11 +71,12 @@
 </body>
 
 <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-    var elements = document.getElementsByClassName('home-page');
-    var html = elements[0].innerText.toLowerCase();
-    console.log(html);
+  $('link[data-src]').each(function() {
+    var self = $(this);
+    var src = self.attr('data-src');
+    $.get(src, function(fileContent) {
+      console.log(fileContent.toLowerCase());
+    })
   });
 </script>
 
