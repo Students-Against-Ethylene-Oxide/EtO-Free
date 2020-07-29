@@ -13,14 +13,6 @@
 <body>
   <?php include 'header.php' ?>
 
-  <nav id="nav">
-    <!-- <span> <input id="search-input" type="text" placeholder="Search" /><button type="submit"> <i class="fa fa-search"></i> </button> </span> -->
-    <span> <a class="navlinks" href="index.html"> Home </a> </span>
-    <span> <a class="navlinks" href="about.html"> About </a> </span>
-    <span> <a class="navlinks" href="eto.html"> What is ethylene oxide? </a> </span>
-    <span> <a class="navlinks" href="reviews.html"> Reviews </a> </span>
-  </nav>
-
   <div class="eto-page">
     <h2> What is Ethylene Oxide? Why is it dangerous?</h2>
     <p>
