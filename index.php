@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="styles.css">
   <script type="text/javascript" src="javascript.js"></script>
   <script type="text/javascript" src="jquery.js"></script>
-  <!-- <link type="text/html" data-src="about.html" />
+  <link type="text/html" data-src="about.html" />
   <link type="text/html" data-src="eto.html" />
-  <link type="text/html" data-src="reviews.html" /> -->
+  <link type="text/html" data-src="reviews.html" />
 </head>
 
 <body>
@@ -60,24 +60,20 @@
       <iframe src="https://www.youtube.com/embed/-k3uZn9sFIY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
     </div>
+
+    <div id="myDiv">
+
+    </div>
   </div>
 
+<?php echo readfile("javascript.js"); ?>
   <footer>
     <h5> Questions? Comments? Concerns? Life problems? Contact us at <a class='links' href="mailto:ethyleneoxide.free@gmail.com"> ethyleneoxide.free@gmail.com </a> <br><br>
     <em>EtO-Free is a SAEtO-sponsored group. For more information, please visit the website <a class="links" href="https://saeto.org" target="_blank">here.</a></em></h5>
 
     <span><a href="https://www.facebook.com/StudentsAgainstEthyleneOxide/" target="_blank"><i class='fa fa-facebook-square'></i></a> <a href="https://www.instagram.com/eto.free/" target="_blank"><i class='fa fa-instagram'></i></a> <a href="https://twitter.com/ethyleneofree" target="_blank"><i class='fa fa-twitter'></i></a> <a href="https://www.youtube.com/channel/UCCn6rB_FHHjlK51wkFqOHdQ" target="_blank"><i class="fa fa-youtube-play"></i></a></span>
   </footer>
-</body>
 
-<script>
-  $('link[data-src]').each(function() {
-    var self = $(this);
-    var src = self.attr('data-src');
-    $.get(src, function(fileContent) {
-      console.log(fileContent.toLowerCase());
-    })
-  });
-</script>
+</body>
 
 </html>
