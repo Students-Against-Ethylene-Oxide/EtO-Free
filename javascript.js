@@ -1,4 +1,3 @@
-
 var filters = [];
 var cards = document.getElementsByClassName('card');
 var tags = document.getElementsByClassName('tag');

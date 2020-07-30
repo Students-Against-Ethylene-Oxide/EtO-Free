@@ -28,6 +28,14 @@
       <li> Irritation of the eyes, skin, and nose </li>
       <li> Problems with brain and nerve functions </li>
     </ul>
+
+    <?php
+    $file_contents = file_get_contents('reviews.php');
+    $pattern = "/\<.\>\s/";
+
+    preg_match_all($pattern, "<hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello> <hello> </hello ><hello> </hello> <hello> </hello>", $matches);
+    echo json_encode($matches);
+    ?>
   </div>
 
   <?php include 'footer.php' ?>

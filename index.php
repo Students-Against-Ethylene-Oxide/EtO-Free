@@ -21,14 +21,11 @@
       </p>
     </div>
 
-    <div>
+    <!-- <div>
       <iframe src="https://www.youtube.com/embed/-k3uZn9sFIY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
-    </div>
+    </div> -->
 
-    <div id="myDiv">
-
-    </div>
   </div>
 
   <?php include 'footer.php' ?>
