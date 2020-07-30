@@ -1,0 +1,146 @@
+header {
+  height: 90px;
+  justify-content: space-between;
+}
+
+header a img, #topnav {
+  display: none;
+}
+
+header a h1 {
+  border: none;
+  display: initial;
+  font-size: 35px;
+  height: auto;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 0;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 90px;
+  white-space: nowrap;
+  width: 100vw;
+}
+
+nav span {
+  display: inline-block;
+  padding: 0 20px;
+  vertical-align: 100%;
+}
+
+nav span:first-child input {
+  background-color: #f4eded;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  margin: 0;
+  padding: 3px;
+}
+
+nav span:first-child button {
+  background-color: #f4eded;
+  border: none;
+  border-radius: 0;
+  font-size: 18px;
+  padding: 1px 2px 2px 2px;
+}
+
+nav span:first-child i {
+  color: #0b132b;
+}
+
+nav span:first-child i:hover {
+  color: #44bba4;
+}
+
+nav.change {
+  height: 60px;
+}
+
+#search {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  /* visibility: hidden; */
+  width: 25px;
+}
+
+#search i {
+  color: #0b132b;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+#disclaimer {
+  margin: 110px 10% 20px 10%;
+}
+
+#filters {
+  border: 1px solid rgba(51, 62, 71, 0.3);
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+#reviews-main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+#reviews-sidebar {
+  border: 1px solid rgba(51, 62, 71, 0.3);
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+.home-page {
+  align-items: flex-start;
+  margin: 100px 10% 0 10%;
+}
+
+.home-page div:first-child {
+  margin-bottom: 20px;
+}
+
+.home-page iframe {
+  height: 36vw;
+  width: 64vw;
+}
+
+.about-page {
+  align-items: center;
+  margin: 100px 10% 0 10%;
+}
+
+.about-page .row div {
+  text-align: center;
+}
+
+.eto-page {
+  align-items: flex-start;
+  margin: 100px 10% 0 10%;
+}
+
+.team-pics {
+  width: 50%;
+}
+
+.reviews-page {
+  margin: 0 10% 0 10%;
+}
+
+.card {
+  width: 100%;
+}
+
+.panel h3 {
+  display: inline-block;
+  width: 100%;
+}

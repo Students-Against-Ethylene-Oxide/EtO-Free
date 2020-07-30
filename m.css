@@ -1,0 +1,131 @@
+header {
+  height: 100px;
+}
+
+header a img, #topnav {
+  display: none;
+}
+
+header a h1 {
+  border: none;
+  display: initial;
+  font-size: 40px;
+  height: auto;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 0;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 100px;
+  white-space: nowrap;
+  width: 100vw;
+}
+
+nav span {
+  display: inline-block;
+  padding: 0 20px;
+  vertical-align: 100%;
+}
+
+nav span:first-child input {
+  background-color: #f4eded;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  margin: 0;
+  padding: 3px;
+}
+
+nav span:first-child button {
+  background-color: #f4eded;
+  border: none;
+  border-radius: 0;
+  font-size: 18px;
+  padding: 1px 2px 2px 2px;
+}
+
+nav span:first-child i {
+  color: #0b132b;
+}
+
+nav span:first-child i:hover {
+  color: #44bba4;
+}
+
+#menu-icon {
+  margin: 0 2.5vw 0 2vw;
+}
+
+#search {
+  background: none;
+  width: 25px;
+}
+
+#search i {
+  cursor: pointer;
+  font-size: 27.5px;
+}
+
+#nav.change {
+  height: 60px;
+}
+
+#disclaimer {
+  margin: 120px 10% 20px 10%;
+}
+
+#reviews-main {
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.home-page {
+  align-items: flex-start;
+  margin: 120px 10% 0 10%;
+}
+
+.home-page iframe {
+  height: 31.5vw;
+  width: 56vw;
+}
+
+.about-page {
+  align-items: center;
+  margin: 120px 10% 0 10%;
+}
+
+.about-page .row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 70%;
+}
+
+.about-page .row div {
+  min-width: 40%;
+  text-align: center;
+}
+
+.team-pics {
+  width: 60%;
+}
+
+.eto-page {
+  align-items: flex-start;
+  margin-top: 120px;
+}
+
+.reviews-page {
+  padding: 0;
+  margin: 0 10% 0 10%;
+}
+
+.card {
+  width: 45%;
+}

@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> EtO-Free Skincare </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <script type="text/javascript" src="javascript.js"></script>
-</head>
+<?php include 'head.php' ?>
 
 <body>
 
@@ -20,7 +13,7 @@
       <div class="mission">
         <h2> Our Mission </h2>
         <p>
-          SAEtO aims to educate skincare and beauty product conumers about the dangers of ethylene oxide and promote ethylene oxide-free products through product reviews and research on some of the most popular products out there.
+          SAEtO aims to educate skincare and beauty product consumers about the dangers of ethylene oxide and promote ethylene oxide-free products through product reviews and research on some of the most popular products out there.
         </p>
       </div><br>
 
@@ -83,7 +76,7 @@
       </div>
 
       <div class="team">
-        <img class='team-pics' src="assets/images/img asset 6.png" title="Amirah Mohiuddin" /></a>
+        <img class='team-pics' src="assets/images/img asset 6.png" title="Amirah Mohiuddin!" /></a>
         <h3> Amirah Mohiuddin </h3>
         <h4> Research Manager </h4>
         <p>
@@ -110,6 +103,8 @@
       </div>
     </div>
   </div>
+
+  <?php include 'search.php' ?>
 
   <?php include 'footer.php' ?>
 </body>

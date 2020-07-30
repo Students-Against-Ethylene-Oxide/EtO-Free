@@ -1,0 +1,132 @@
+header {
+  justify-content: space-between;
+  height: 80px;
+}
+
+header a h1, #topnav {
+  display: none;
+}
+
+header a img {
+  border: 2px solid #0b132b;
+  border-radius: 50%;
+  display: initial;
+  height: 60px;
+  margin: 0;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  justify-content: center;
+  opacity: 0.95;
+  position: fixed;
+  transition: 0.5s;
+  width: 100%;
+}
+
+nav span {
+  border-bottom: 1px solid #f4eded;
+  padding: 10px 0;
+  width: 80%;
+}
+
+nav input[type=text] {
+  color: #0b132b;
+  font-size: 18px;
+  height: 30px;
+  width: 85%;
+}
+
+nav button {
+  /* border: 1px solid #f4eded; */
+  background: none;
+  border: none;
+  color: #f4eded;
+  cursor: pointer;
+  font-size: 1.05em;
+  height: 30px;
+  text-align: center;
+  width: 15%;
+}
+
+nav.change {
+  height: 100vh;
+}
+
+footer h5, footer h6 {
+  font-size: 16px;
+  width: 80%;
+}
+
+#search {
+  background: none;
+  border: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  max-width: 25px;
+}
+
+#search i {
+  color: #0b132b;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+#disclaimer {
+  margin: 100px 10% 20px 10%;
+}
+
+#filters {
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+#reviews-main {
+  align-items: initial;
+  width: 100%;
+}
+
+#reviews-sidebar {
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+.home-page {
+  align-items: center;
+  margin: 100px 10% 0 10%;
+}
+
+.home-page div:first-child {
+  margin-bottom: 20px;
+}
+
+.home-page iframe {
+  height: 45vw;
+  width: 80vw;
+}
+
+.about-page {
+  align-items: center;
+  margin: 100px 10% 0 10%;
+}
+
+.about-page .row div {
+  text-align: center;
+}
+
+.eto-page {
+  align-items: flex-start;
+  margin: 100px 10% 0 10%;
+}
+
+.reviews-page {
+  margin: 0 10% 0 10%;
+}
+
+.team-pics {
+  width: 70%;
+}

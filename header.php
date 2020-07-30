@@ -13,10 +13,17 @@
     <a href="reviews.php" class="toplinks"> Reviews </a>
 
     <span id="search-box"
-      onmouseover="change('topnav'); change('search-box'); document.getElementById('search-bar').click();"
+      onmouseover="change('topnav'); change('search-box');"
       onmouseout="change('topnav'); change('search-box');">
-      <button type="submit"><i class="fa fa-search"></i></button>
-      <input id="search-bar" type="text" placeholder="Search" />
+      <button
+        type="submit"
+        onclick="search.php">
+        <i class="fa fa-search"></i></button>
+      <input id="search-bar"
+        name="page-search"
+        type="text"
+        placeholder="Search"
+        onload="document.getElementById('search-bar').value = 'hello';"/>
     </span>
   </span>
 
