@@ -2,9 +2,30 @@ var filters = [];
 var cards = document.getElementsByClassName('card');
 var tags = document.getElementsByClassName('tag');
 
-function change(object) {
-  var element = document.getElementById(object);
+(function sortBy(attr) {
+  var items = document.getElementsByClassName('card');
+  // magically coerce into an array first
+  items = Array.prototype.slice.call(items);
 
+  items.sort(function(a, b) {
+    return a.getAttribute(attr).localeCompare(b.getAttribute(attr));
+  });
+  console.log(items);
+  for(var i = 0; i < items.length; i++) {
+    // store the parent node so we can reattach the item
+    var parent = items[i].parentNode;
+    // detach it from wherever it is in the DOM
+    var detatchedItem = parent.removeChild(items[i]);
+    // reattach it.  This works because we are iterating
+    // over the items in the same order as they were re-
+    // turned from being sorted.
+    parent.appendChild(detatchedItem);
+  }
+})('data-name');
+
+function change(selector) {
+  var element = document.querySelector(selector);
+  console.log(element);
   if (element.classList) {
     element.classList.toggle("change");
   } else {
@@ -21,7 +42,7 @@ function change(object) {
 }
 
 function changeThis() {
-  console.log('called');
+  console.log(this);
   if (this.classList) {
     this.classList.toggle("change");
   } else {
@@ -40,9 +61,11 @@ function changeThis() {
 function filterOut() {
   var input, content;
   input = document.getElementById('filter-input').value.trim();
+  console.log(input);
 
   for (var i = 0; i < cards.length; i++) {
     content = cards[i].innerHTML.toLowerCase();
+    console.log(content);
     if (!content.includes(input.toLowerCase())) {
       cards[i].style.display = "none";
     } else {
@@ -55,12 +78,13 @@ function filter(attr, attrValue) {
   var clicked = this.getAttribute('data-click');
   var selector = "[" + attr + "=" + attrValue + "]";
   document.getElementById('filter-input').value = '';
+  console.log(selector);
 
   if (clicked == 'no') {
     if (!filters.includes(selector)) {
       filters.push(selector);
     }
-
+    console.log(filters);
     for (var i = 0; i < cards.length; i++) {
       cards[i].style.display = 'none';
     }
@@ -113,23 +137,18 @@ function clearFilters() {
   }
 }
 
-function sortBy(attr) {
-  var items = document.getElementsByClassName('card');
-  // magically coerce into an array first
-  items = Array.prototype.slice.call(items);
-
-  items.sort(function(a, b) {
-    return a.getAttribute(attr).localeCompare(b.getAttribute(attr));
-  });
-
-  for(var i = 0; i < items.length; i++) {
-    // store the parent node so we can reattach the item
-    var parent = items[i].parentNode;
-    // detach it from wherever it is in the DOM
-    var detatchedItem = parent.removeChild(items[i]);
-    // reattach it.  This works because we are iterating
-    // over the items in the same order as they were re-
-    // turned from being sorted.
-    parent.appendChild(detatchedItem);
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "search.php?q=" + str, true);
+    xmlhttp.send();
   }
 }

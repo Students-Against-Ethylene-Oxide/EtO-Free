@@ -12,29 +12,29 @@
     <div id="filters">
       <span>
         <button id="sort-by"
-          onclick="change('sort-drop');"
-          ontouchstart="change('sort-drop');">
+          onclick="change('#sort-drop');"
+          ontouchstart="change('#sort-drop');">
           Sort <i class="fa fa-chevron-down"></i></button>
         <div id="sort-drop">
           <button
             class="sort-by"
-            onclick="sortBy('data-name'); change('sort-drop');"
-            ontouchstart="sortBy('data-name'); change('sort-drop');">
+            onclick="sortBy('data-name'); change('#sort-drop');"
+            ontouchstart="sortBy('data-name'); change('#sort-drop');">
             A to Z </button>
           <button
             class="sort-by"
-            onclick="sortBy('data-company'); change('sort-drop');"
-            ontouchstart="sortBy('data-company'); change('sort-drop');">
+            onclick="sortBy('data-company'); change('#sort-drop');"
+            ontouchstart="sortBy('data-company'); change('#sort-drop');">
             By Company </button>
           <button
             class="sort-by"
-            onclick="sortBy('data-prodtype'); change('sort-drop');"
-            ontouchstart="sortBy('data-prodtype'); change('sort-drop');">
+            onclick="sortBy('data-prodtype'); change('#sort-drop');"
+            ontouchstart="sortBy('data-prodtype'); change('#sort-drop');">
             By Product </button>
           <button
             class="sort-by"
-            onclick="sortBy('data-date'); change('sort-drop');"
-            ontouchstart="sortBy('data-date'); change('sort-drop');">
+            onclick="sortBy('data-date'); change('#sort-drop');"
+            ontouchstart="sortBy('data-date'); change('#sort-drop');">
             By Release Date </button>
         </div>
       </span>
@@ -157,8 +157,8 @@
           &#10005; </button></span>
       <a id="accordion1"
         class="accordion"
-        onclick="change('skin-type'); change('accordion1');"
-        ontouchstart="change('skin-type'); change('accordion1');">
+        onclick="change('#skin-type'); change('#accordion1');"
+        ontouchstart="change('#skin-type'); change('#accordion1');">
         Skin Type </a>
       <div id="skin-type"
         class="panel">
@@ -192,8 +192,8 @@
 
       <a id="accordion2"
         class="accordion"
-        onclick="change('product-type'); change('accordion2');"
-        ontouchstart="change('product-type'); change('accordion2');">
+        onclick="change('#product-type'); change('#accordion2');"
+        ontouchstart="change('#product-type'); change('#accordion2');">
         Product Type </a>
       <div id="product-type"
         class="panel">
@@ -226,8 +226,8 @@
 
       <a id="accordion3"
         class="accordion"
-        onclick="change('company'); change('accordion3');"
-        ontouchstart="change('company'); change('accordion3');">
+        onclick="change('#company'); change('#accordion3');"
+        ontouchstart="change('#company'); change('#accordion3');">
         Company </a>
       <div id="company"
         class="panel">
@@ -277,13 +277,12 @@
     </div>
   </div>
 
-  <?php include 'search.php' ?>
+  <?php include 'content.php' ?>
 
   <?php include 'footer.php' ?>
 </body>
 
-<script>
-  sortBy('data-name');
-</script>
+
+<script type="text/javascript" src="javascript.js"></script>
 
 </html>

@@ -1,19 +1,83 @@
+
 <?php
+// Array with names
+$a[] = "Anna";
+$a[] = "Brittany";
+$a[] = "Cinderella";
+$a[] = "Diana";
+$a[] = "Eva";
+$a[] = "Fiona";
+$a[] = "Gunda";
+$a[] = "Hege";
+$a[] = "Inga";
+$a[] = "Johanna";
+$a[] = "Kitty";
+$a[] = "Linda";
+$a[] = "Nina";
+$a[] = "Ophelia";
+$a[] = "Petunia";
+$a[] = "Amanda";
+$a[] = "Raquel";
+$a[] = "Cindy";
+$a[] = "Doris";
+$a[] = "Eve";
+$a[] = "Evita";
+$a[] = "Sunniva";
+$a[] = "Tove";
+$a[] = "Unni";
+$a[] = "Violet";
+$a[] = "Liza";
+$a[] = "Elizabeth";
+$a[] = "Ellen";
+$a[] = "Wenche";
+$a[] = "Vicky";
 
-$handle = fopen('fullcontent.txt', 'r');
-$content = stream_get_contents($handle);
-fclose($handle);
-preg_replace("/(<[\w\W]*?>)/imu", "", $content);
-$text = preg_replace(["/(<[\w\W]*?>)/imu", "/\t/imu"], "", $content);
-console_log(html_entity_decode($text));
+// get the q parameter from URL
+$q = $_REQUEST["q"];
 
-echo $_GET['page-search'];
+$hint = "";
 
-function console_log($output, $with_script_tags = true) {
-    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
-    if ($with_script_tags) {
-        $js_code = '<script>' . $js_code . '</script>';
-    }
-    echo $js_code;
+// lookup all hints from array if $q is different from ""
+if ($q !== "") {
+ $q = strtolower($q);
+ $len=strlen($q);
+ foreach($a as $name) {
+   if (stristr($q, substr($name, 0, $len))) {
+     if ($hint === "") {
+       $hint = $name;
+     } else {
+       $hint .= ", $name";
+     }
+   }
+ }
 }
+
+// Output "no suggestion" if no hint was found or output correct values
+echo $hint === "" ? "no suggestion" : $hint;
 ?>
+
+<!-- <?php
+
+  $handle = fopen('fullcontent.txt', 'r');
+  $content = stream_get_contents($handle);
+  fclose($handle);
+  preg_replace("/(<[\w\W]*?>)/imu", "", $content);
+  $text = preg_replace(["/(<[\w\W]*?>)/imu", "/\t/imu"], "", $content);
+
+  // get the q parameter from URL
+  $q = $_REQUEST["q"];
+
+  $hint = "";
+
+  // lookup all hints from array if $q is different from ""
+  if ($q !== "") {
+    $q = strtolower($q);
+    preg_match_all($_GET['page-search'], $text, $matches);
+    echo $matches
+    return;
+  }
+
+  // Output "no suggestion" if no hint was found or output correct values
+  echo $hint;
+
+?> -->

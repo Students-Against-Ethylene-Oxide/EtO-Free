@@ -104,9 +104,9 @@
     </div>
   </div>
 
-  <?php include 'search.php' ?>
-
   <?php include 'footer.php' ?>
 </body>
+
+<script type="text/javascript" src="javascript.js"></script>
 
 </html>

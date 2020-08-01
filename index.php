@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php include 'head.php' ?>
-<script> document.getElementById('search-bar').value = 'hello'; </script>
+
 <body>
   <?php include 'header.php' ?>
 
@@ -14,17 +14,19 @@
       </p>
     </div>
 
-    <!-- <div>
+    <div>
       <iframe src="https://www.youtube.com/embed/-k3uZn9sFIY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
-    </div> -->
+    </div>
 
   </div>
 
-  <?php include 'search.php' ?>
+  <?php include 'content.php' ?>
 
   <?php include 'footer.php' ?>
 
 </body>
+
+<script type="text/javascript" src="javascript.js"></script>
 
 </html>
