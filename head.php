@@ -9,4 +9,5 @@
   <link href="m.css" rel="stylesheet" media="screen and (min-width: 768px)" />
   <link href="l.css" rel="stylesheet" media="screen and (min-width: 992px)" />
   <link href="xl.css" rel="stylesheet" media="screen and (min-width: 1200px)" />
+  <script type="text/javascript" src="javascript.js"></script>
 </head>

@@ -30,6 +30,8 @@ nav {
 nav span {
   border-bottom: 1px solid #f4eded;
   padding: 10px 0;
+  transition: 0.2s;
+  visibility: hidden;
   width: 80%;
 }
 
@@ -54,6 +56,10 @@ nav button {
 
 nav.change {
   height: 100vh;
+}
+
+nav.change span {
+  visibility: visible;
 }
 
 footer h5, footer h6 {

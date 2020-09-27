@@ -2,7 +2,7 @@ var filters = [];
 var cards = document.getElementsByClassName('card');
 var tags = document.getElementsByClassName('tag');
 
-(function sortBy(attr) {
+function sortBy(attr) {
   var items = document.getElementsByClassName('card');
   // magically coerce into an array first
   items = Array.prototype.slice.call(items);
@@ -21,7 +21,7 @@ var tags = document.getElementsByClassName('tag');
     // turned from being sorted.
     parent.appendChild(detatchedItem);
   }
-})('data-name');
+}
 
 function change(selector) {
   var element = document.querySelector(selector);

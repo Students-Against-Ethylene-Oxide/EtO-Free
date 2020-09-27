@@ -12,20 +12,6 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Seaweed Script', cursive;
 */
 
-:root {
-	--accent1: #fc7a57;
-	--accent2: #44bba4;
-	--base1: #f4eded;
-	--base2: #4c5760;
-	--base3: #333e47;
-	--base4: #0b132b;
-	--linksdark: #f9db6d;
-	--linkslight: #3d0c11;
-	--title: Euphoria Script, Dancing Script, Seaweed Script, cursive;
-	--title-font: Lato, Poppins, Raleway, sans-serif;
-	--body-font: Cormorant Garamond, Cormorant, Crimson Text, serif;
-}
-
 #disclaimer {
 	color: #3d0c11;
 	font-family: Lato, Poppins, Raleway, sans-serif;
@@ -127,10 +113,6 @@ footer i {
 	color: #3d0c11;
 	cursor: pointer;
 	padding: 0 5px;
-}
-
-#topnav {
-  display: flex;
 }
 
 #topnav a {
@@ -442,7 +424,7 @@ footer i {
 	margin: 3px 1px;
 	max-height: 55px;
 	padding: 10px;
-  transition: 0.05s;
+  	transition: 0.05s;
 	width: max-content;
 }
 

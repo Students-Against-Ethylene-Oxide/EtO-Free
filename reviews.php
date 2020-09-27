@@ -283,6 +283,8 @@
 </body>
 
 
-<script type="text/javascript" src="javascript.js"></script>
+<script type="text/javascript" src="javascript.js">
+  sortBy('data-name');
+</script>
 
 </html>

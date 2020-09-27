@@ -6,12 +6,16 @@ nav {
   display: none;
 }
 
-#menu-icon, #search, #filters > button:last-child {
+#menu-icon, #search, #nav, #filters > button:last-child {
   display: none;
 }
 
 #disclaimer {
   margin: 130px 10% 20px 10%;
+}
+
+#topnav {
+  display: flex;
 }
 
 #reviews-main {
