@@ -254,7 +254,6 @@ footer i {
 
 #reviews-main {
 	align-items: stretch;
-	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
 }
@@ -313,6 +312,12 @@ footer i {
 	color: #fc7a57;
 }
 
+#companies-main > .card {
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+}
+
 .change #bar1 {
   -webkit-transform: rotate(-45deg) translate(0, 0);
   transform: rotate(-45deg) translate(-3.25px, 8px);
@@ -327,7 +332,7 @@ footer i {
   transform: rotate(45deg) translate(-3.25px, -8px);
 }
 
-.home-page, .about-page, .eto-page {
+.home-page, .about-page, .eto-page, .companies-page {
 	display: flex;
 	flex-direction: column;
 	min-height: 70vh;
@@ -338,6 +343,10 @@ footer i {
 	flex-flow: row wrap;
 	height: min-content;
 	/* min-height: 60vh; */
+}
+
+.companies-page {
+	/* border: 1px solid rgba(11, 19, 43, 0.2); */
 }
 
 .fa-filter, .fa-chevron-down {

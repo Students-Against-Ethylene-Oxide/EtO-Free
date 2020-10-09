@@ -126,6 +126,11 @@ nav span:first-child i:hover {
   margin: 0 10% 0 10%;
 }
 
+.companies-page {
+  padding: 0;
+  margin: 120px 10% 0 10%;
+}
+
 .card {
   width: 45%;
 }

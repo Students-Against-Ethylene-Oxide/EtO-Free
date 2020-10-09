@@ -5,44 +5,51 @@
 <body>
   <?php include 'header.php' ?>
 
-  <div id="companies-main">
+  <main class="companies-page">
     <span class="card">
-      Badger Healthy Body Care
+      <h3> Badger Healthy Body Care </h3>
     </span>
     <span class="card">
-      Jane Iredale
+      <h3> Jane Iredale </h3>
     </span>
     <span class="card">
-      Sia Botanics
+      <h3> Sia Botanics </h3>
     </span>
     <span class="card">
-      SkinOwl
+      <h3> SkinOwl </h3>
     </span>
     <span class="card">
-      First Aid Beauty
+      <h3> First Aid Beauty </h3>
     </span>
     <span class="card">
-      Thesis
+      <h3> Thesis </h3>
     </span>
     <span class="card">
-      Naturium
+      <h3> Naturium </h3>
     </span>
     <span class="card">
-      Christina Moss Naturals
+      <h3> Christina Moss Naturals </h3>
     </span>
     <span class="card">
-      Nourish Organic
+      <h3> Nourish Organic </h3>
     </span>
     <span class="card">
-      Tammy Fender
+      <h3> Tammy Fender </h3>
     </span>
     <span class="card">
-      LILFOX
+      <h3> LILFOX </h3>
     </span>
     <span class="card">
-      May Lindstrom Care
+      <h3> May Lindstrom Care </h3>
     </span>
     <span class="card">
-      LaurelWhole Plant Organica
+      <h3> Laurel Whole Plant Organica </h3>
     </span>
+  </main>
+
+    <?php include 'content.php' ?>
+
+    <?php include 'footer.php' ?>
 </body>
+
+</html>

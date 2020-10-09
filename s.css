@@ -33,7 +33,7 @@ nav span {
   vertical-align: 100%;
 }
 
-nav span:first-child input {
+nav span input {
   background-color: #f4eded;
   border: none;
   border-radius: 0;
@@ -134,6 +134,11 @@ nav.change {
 
 .reviews-page {
   margin: 0 10% 0 10%;
+}
+
+.companies-page {
+  margin: 100px 10% 0 10%;
+  padding-right: 20px;
 }
 
 .card {
