@@ -63,7 +63,7 @@ nav.change span {
 }
 
 footer h5, footer h6 {
-  font-size: 16px;
+  font-size: 12px;
   width: 80%;
 }
 
@@ -131,6 +131,10 @@ footer h5, footer h6 {
 
 .reviews-page {
   margin: 0 10% 0 10%;
+}
+
+.companies-page {
+  margin: 100px 10% 0 10%;
 }
 
 .team-pics {
